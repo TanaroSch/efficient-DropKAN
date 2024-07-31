@@ -1,9 +1,10 @@
 [project]
-name = "efficient-kan"
+name = "efficient-dropkan"
 version = "0.1.0"
-description = "An efficient pure-PyTorch implementation of Kolmogorov-Arnold Network (KAN)."
+description = "An efficient pure-PyTorch implementation of Kolmogorov-Arnold Network (KAN) with Dropout."
 authors = [
     {name = "Blealtan Cao", email = "blealtan@outlook.com"},
+    {name = "Tanaro Schädler", email = "tanaro.schaedler@uni-ulm.de"},
 ]
 dependencies = [
     "torch>=2.3.0",
