@@ -10,14 +10,14 @@ This repository provides an efficient implementation of Kolmogorov-Arnold Networ
 
 ## Usage
 
-1. Include the `kan.py` file in your project or install efficient-dropkan with pip from local source or the git repository.
+1. Include the `dropkan.py` file in your project or install efficient-dropkan with pip from local source or the git repository.
 
-2. Import the KAN class:
+2. Import the DropKAN class:
 
 ```python
-from efficient_kan import KAN
+from efficient_dropkan import DropKAN
 ```
-3. Create and use a KAN model:
+3. Create and use a DropKAN model:
 ```
 import torch
 
@@ -26,8 +26,8 @@ input_dim = 10
 hidden_dims = [64, 32]
 output_dim = 1
 
-# Create KAN model with dropout
-model = KAN(
+# Create DropKAN model with dropout
+model = DropKAN(
     [input_dim] + hidden_dims + [output_dim],
     drop_rate=0.1,
     drop_mode='postact',
@@ -52,7 +52,7 @@ for epoch in range(num_epochs):
 
 ## Customization
 
-The KAN class accepts the following parameters:
+The DropKAN class accepts the following parameters:
 
 - `layers_hidden`: List of integers defining the network architecture
 - `grid_size`: Number of grid intervals (default: 5)

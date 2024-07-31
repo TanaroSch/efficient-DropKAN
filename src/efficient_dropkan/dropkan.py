@@ -4,7 +4,7 @@ import torch.nn as nn
 import math
 
 
-class KANLinear(torch.nn.Module):
+class DropKANLinear(torch.nn.Module):
     def __init__(
         self,
         in_features,
@@ -22,7 +22,7 @@ class KANLinear(torch.nn.Module):
         drop_mode='postact',
         drop_scale=True
     ):
-        super(KANLinear, self).__init__()
+        super(DropKANLinear, self).__init__()
         self.in_features = in_features
         self.out_features = out_features
         self.grid_size = grid_size
@@ -273,7 +273,7 @@ class KANLinear(torch.nn.Module):
         )
 
 
-class KAN(torch.nn.Module):
+class DropKAN(torch.nn.Module):
     def __init__(
         self,
         layers_hidden,
@@ -289,13 +289,13 @@ class KAN(torch.nn.Module):
         drop_mode='postact',
         drop_scale=True
     ):
-        super(KAN, self).__init__()
+        super(DropKAN, self).__init__()
         self.grid_size = grid_size
         self.spline_order = spline_order
         self.layers = torch.nn.ModuleList()
         for in_features, out_features in zip(layers_hidden, layers_hidden[1:]):
             self.layers.append(
-                KANLinear(
+                DropKANLinear(
                     in_features,
                     out_features,
                     grid_size=grid_size,
