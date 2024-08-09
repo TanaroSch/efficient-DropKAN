@@ -88,7 +88,7 @@ Key observations:
 
 For the SUSY dataset, I evaluated multiple model architectures and configurations. The comprehensive results are best visualized in the following image:
 
-![SUSY Results](tests\results\susy_performance_metrics.png)
+![SUSY Results](tests/results/susy_performance_metrics.png)
 
 This image presents performance metrics across different model architectures and DropKAN configurations, providing a concise overview of our extensive evaluation on the SUSY dataset.
 
